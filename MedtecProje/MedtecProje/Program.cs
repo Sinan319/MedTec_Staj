@@ -18,6 +18,8 @@ app.UseSwaggerUI(c => {
 
 app.UseHttpsRedirection();
 
+app.UseStaticFiles(); // app.UseSwagger()'dan önce veya sonra olabilir.Sonradan ekledim
+
 app.UseAuthorization();
 
 app.MapControllers();
