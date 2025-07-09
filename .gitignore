@@ -1,0 +1,11 @@
+# Visual Studio klasörleri
+.vs/
+*.user
+*.suo
+
+# Build klasörleri
+bin/
+obj/
+
+# Diğer
+*.log

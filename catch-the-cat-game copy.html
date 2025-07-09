@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catch the Cat</title>
+
+    <head>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                background-color: #fce4ec;
+                font-family: sans-serif;
+            }
+            
+            #score-board{
+                font-size: 24px;
+                margin-bottom: 20px;
+                color: #d32f2f;
+            }
+
+            #game-area {
+                position: relative;
+                width: 500px;
+                height: 500px;
+                background-color: #fff3e0;
+                border: 3px solid #ff9800;
+                border-radius: 10px;
+            }
+
+            #cat {
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                background-image: url('cat.png');
+                background-size: cover;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+
+<body>
+    <div id="score-board">Skor: 0</div>
+    <div id="game-area">
+        <div id="cat"></div>
+    </div>
+    <script>
+        const cat = document.getElementById('cat');
+        const area = document.getElementById('game-area');
+        const scoreBoard = document.getElementById('score-board');
+        let score = 0;
+        function updateScoreDisplay(){
+            scoreBoard.textContent = `Skor : ${score}`;
+        }
+    </script>
+</body>
+</head>
