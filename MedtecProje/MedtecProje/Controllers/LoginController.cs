@@ -10,7 +10,7 @@ namespace MedtecProje.Controllers
         [HttpPost]
         public IActionResult Post([FromBody] LoginModel login)
         {
-            if (login.Username == "admin" && login.Password == "1234")
+            if (login.Username == "stajyer" && login.Password == "1234")
             {
                 return Ok(new { message = "Giriş başarılı" });
             }
@@ -23,8 +23,8 @@ namespace MedtecProje.Controllers
 
     public class LoginModel
     {
-        public string Username { get; set; }
-        public string Password { get; set; }
+        public string Username { get; set; } = string.Empty;
+        public string Password { get; set; } = string.Empty;
     }
 }
 
